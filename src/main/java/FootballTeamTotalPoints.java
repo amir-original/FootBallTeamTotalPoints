@@ -10,15 +10,14 @@ public class FootballTeamTotalPoints {
            firstTeamGoalCount  = convertStringToInteger(teamsGoal[0]);
            secondTeamGoalCount = convertStringToInteger(teamsGoal[1]);
 
-           if(isTheMatchDraws(firstTeamGoalCount, secondTeamGoalCount)){
-               totalCount ++;
-           }
-           if(didTheOurTeamLose(firstTeamGoalCount, secondTeamGoalCount)){
-              totalCount += 0;
-           }
-           if(didTheOurTeamWin(firstTeamGoalCount, secondTeamGoalCount)){
+            if(isTheMatchDraws(firstTeamGoalCount, secondTeamGoalCount)){
+                totalCount ++;
+            }
+            else if(didTheOurTeamWin(firstTeamGoalCount, secondTeamGoalCount)){
                totalCount += 3;
-           }
+           }else{
+                totalCount +=0;
+            }
         }
         return totalCount;
     }
